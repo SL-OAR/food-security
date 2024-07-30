@@ -1,0 +1,31 @@
+ay,var_cov,over_thresh.x,over_thresh.y,util,var_out
+2324,giso_dum,Y,Y,confound,ps
+2324,ts_tft_dum,Y,Y,confound,ps
+2324,d_desc_bin_1_dum,Y,Y,confound,ps
+2324,giso_dum,Y,Y,confound,s
+2324,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,Y,Y,confound,s
+2324,d_desc_bin_1_dum,Y,Y,confound,s
+2324,giso_dum,Y,Y,confound,ls
+2324,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,Y,Y,confound,ls
+2324,ts_tft_dum,Y,Y,confound,ls
+2324,d_desc_bin_1_dum,Y,Y,confound,ls
+2223,giso_dum,NA,NA,confound,ps
+2223,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,NA,NA,confound,ps
+2223,d_desc_bin_1_dum,NA,NA,confound,ps
+2122,giso_dum,NA,NA,confound,ps
+2021,giso_dum,NA,NA,confound,ps
+2021,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,NA,NA,confound,ps
+2223,giso_dum,NA,NA,confound,s
+2223,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,NA,NA,confound,s
+2223,d_desc_bin_1_dum,NA,NA,confound,s
+2122,giso_dum,NA,NA,confound,s
+2021,giso_dum,NA,NA,confound,s
+2223,giso_dum,NA,NA,confound,ls
+2223,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,NA,NA,confound,ls
+2223,ts_tft_dum,NA,NA,confound,ls
+2223,d_desc_bin_1_dum,NA,NA,confound,ls
+2122,giso_dum,NA,NA,confound,ls
+2122,ts_tft_dum,NA,NA,confound,ls
+2021,giso_dum,NA,NA,confound,ls
+2021,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,NA,NA,confound,ls
+2021,ts_tft_dum,NA,NA,confound,ls

@@ -1,0 +1,9 @@
+ayear,fs_desc_bin,n,perc,classification
+2122,Insecure,169,76.81818181818181,Questionable Method
+2122,Secure,51,23.18181818181818,Questionable Method
+2324,Insecure,380,76.92307692307693,Questionable Method
+2324,Secure,114,23.076923076923077,Questionable Method
+2122,Insecure,98,44.54545454545455,Alternative Method
+2122,Secure,122,55.45454545454545,Alternative Method
+2324,Insecure,223,45.1417004048583,Alternative Method
+2324,Secure,271,54.8582995951417,Alternative Method
