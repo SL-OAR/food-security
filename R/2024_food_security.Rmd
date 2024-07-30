@@ -63,7 +63,7 @@ cy_2021<- 2021
 #get main data set
 fs<- read_rds(
   paste0(
-    "../data/processed/fs_ug_2021_thru_",
+    "../data/fs_ug_2021_thru_",
     current_ay,
     ".rds"
   )
@@ -110,7 +110,7 @@ hope<- read_csv("../output/summaries/hope_food_and_housing_security.csv")
 #get recs demos
 dr<- read_rds(
   paste0(
-    "../data/processed/re_fg_ts_2021_thru_",
+    "../data/re_fg_ts_2021_thru_",
     current_ay,
     ".rds"
   )
@@ -220,7 +220,7 @@ sum_fun_2<- function(dat, x, ay, ay_val, ds) {
 #basic needs text data
 bn<- read_csv(
   paste0(
-    "../data/processed/bn4fs_2122_thru_",
+    "../data/bn4fs_2122_thru_",
     current_ay,
     ".csv"
   )
@@ -501,7 +501,7 @@ bn_freq_fin<- bn_clnr_dtm %>%
 
 bn_pos<- read_csv(
   paste0(
-    "../data/processed/bn4fs_parts_of_speech_2122_thru_",
+    "../data/bn4fs_parts_of_speech_2122_thru_",
     current_ay,
     ".csv"
   )
@@ -513,7 +513,7 @@ sent_afinn<- get_sentiments("afinn")
 
 bn_open_code<- read_csv(
   paste0(
-    "../data/processed/bn4fs_2122_thru_",
+    "../data/bn4fs_2122_thru_",
     current_ay,
     "_coded",
     ".csv"
