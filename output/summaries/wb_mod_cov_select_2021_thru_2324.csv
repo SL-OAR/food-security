@@ -6,6 +6,7 @@ ay,var_out,var_cov,util
 2324,s,giso_dum,confound
 2324,s,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,confound
 2324,s,ses,confound
+2324,s,ts_tft_dum,confound
 2324,s,d_desc_bin_1_dum,confound
 2324,ls,giso_dum,confound
 2324,ls,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,confound
