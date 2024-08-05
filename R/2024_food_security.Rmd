@@ -1366,7 +1366,16 @@ coeff_df<- data.frame(
   )
 ) %>%
   mutate(
-    over_thresh = if_else(abs(b) > 0.2, "Y", "N")
+    over_thresh = case_when(
+      var_cov != "ses" &
+        abs(b) >= 0.2 ~ "Y",
+      var_cov == "ses" &
+        abs(b) >= 0.1 ~ "Y",
+      var_cov != "ses" &
+        abs(b) < 0.2 ~ "N",
+      var_cov == "ses" &
+        abs(b) < 0.1 ~ "N"
+    )
   )
 
 confounded_fun<- function(y) {
@@ -1404,30 +1413,31 @@ confounded_fun<- function(y) {
 }
 
 cov_sel<- bind_rows(
-    bind_rows(
-      confounded_fun("ps"),
-      confounded_fun("s"),
-      confounded_fun("ls")
-    ),
-    read_csv(
-      paste0(
-        "../output/summaries/wb_mod_cov_select_2021_thru_",
-        previous_ay,
-        ".csv"
-      )
+  bind_rows(
+    confounded_fun("ps"),
+    confounded_fun("s"),
+    confounded_fun("ls")
+  ),
+  read_csv(
+    paste0(
+      "../output/summaries/wb_mod_cov_select_2021_thru_",
+      previous_ay,
+      ".csv"
     )
-  ) %>%
-    group_by(ay, var_out) %>%
-    distinct(var_cov, .keep_all = T)
-
-write_csv(
-  cov_sel,
-  paste0(
-    "../output/summaries/wb_mod_cov_select_2021_thru_",
-    current_ay,
-    ".csv"
   )
-)
+) %>%
+  group_by(ay, var_out) %>%
+  distinct(var_cov, .keep_all = T) %>%
+  select(ay, var_out, var_cov, util)
+
+#write_csv(
+  #cov_sel,
+  #paste0(
+    #"../output/summaries/wb_mod_cov_select_2021_thru_",
+    #current_ay,
+    #".csv"
+  #)
+#)
 
 #models
 wb_model_fun<- function(y, cov, ay_val) {
@@ -1593,22 +1603,22 @@ wb_fs_plots<- list(
   ay_2324 = list(
     ps = emm_plot_fun("ay_2324", "ps", "emm_2", "Stress"),
     ss = emm_plot_fun("ay_2324", "s", "emm_2", "Sadness"),
-    ls = emm_plot_fun("ay_2324", "ls", "emm_2", "Satisfaction")
+    ls = emm_plot_fun("ay_2324", "ls", "emm_2", "Life Satisfaction")
   ),
   ay_2223 = list(
     ps = emm_plot_fun("ay_2223", "ps", "emm_2", "Stress"),
     ss = emm_plot_fun("ay_2223", "s", "emm_2", "Sadness"),
-    ls = emm_plot_fun("ay_2223", "ls", "emm_2", "Satisfaction")
+    ls = emm_plot_fun("ay_2223", "ls", "emm_2", "Life Satisfaction")
   ),
   ay_2122 = list(
     ps = emm_plot_fun("ay_2122", "ps", "emm_2", "Stress"),
     ss = emm_plot_fun("ay_2122", "s", "emm_2", "Sadness"),
-    ls = emm_plot_fun("ay_2122", "ls", "emm_2", "Satisfaction")
+    ls = emm_plot_fun("ay_2122", "ls", "emm_2", "Life Satisfaction")
   ),
   ay_2021 = list(
     ps = emm_plot_fun("ay_2021", "ps", "emm_2", "Stress"),
     ss = emm_plot_fun("ay_2021", "s", "emm_2", "Sadness"),
-    ls = emm_plot_fun("ay_2021", "ls", "emm_2", "Satisfaction")
+    ls = emm_plot_fun("ay_2021", "ls", "emm_2", "Life Satisfaction")
   )
 )
 
