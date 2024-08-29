@@ -8,7 +8,6 @@ ay,var_out,var_cov,util
 2223,s,ses,confound
 2223,s,d_desc_bin_1_dum,confound
 2223,ls,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,confound
-2223,ls,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,confound
 2223,ls,ses,confound
 2223,ls,ts_tft_dum,confound
 2223,ls,d_desc_bin_1_dum,confound
@@ -21,7 +20,6 @@ ay,var_out,var_cov,util
 2122,ls,ts_tft_dum,confound
 2021,ps,giso_dum,confound
 2021,ps,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,precision
-2021,ps,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,confound
 2021,s,giso_dum,confound
 2021,ls,giso_dum,confound
 2021,ls,re_dum_1 + re_dum_2 + re_dum_3 + re_dum_4,confound
