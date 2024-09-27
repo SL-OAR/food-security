@@ -6,7 +6,8 @@
 data/
 
 # references folder - too large
-references/
+
+# references/
 
 # Mac files
 .DS_Store
