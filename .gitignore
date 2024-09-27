@@ -1,4 +1,15 @@
 .Rproj.user
 .Rhistory
 .DS_Store
+
+# data folder
 data/
+
+# references folder - too large
+references/
+
+# Mac files
+.DS_Store
+
+# annoying temporary Microsoft files
+~$*
